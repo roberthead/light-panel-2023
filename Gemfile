@@ -12,6 +12,7 @@ gem "turbo-rails"
 gem "stimulus-rails"
 gem "jbuilder"
 gem "redis", "~> 4.0"
+gem "haml-rails"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
@@ -30,6 +31,8 @@ group :development do
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   gem "rack-mini-profiler"
+
+  gem "html2haml"
 end
 
 group :test do

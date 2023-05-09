@@ -86,9 +86,24 @@ GEM
       irb (>= 1.5.0)
       reline (>= 0.3.1)
     erubi (1.12.0)
+    erubis (2.7.0)
     ffi (1.15.5)
     globalid (1.1.0)
       activesupport (>= 5.0)
+    haml (6.1.1)
+      temple (>= 0.8.2)
+      thor
+      tilt
+    haml-rails (2.1.0)
+      actionpack (>= 5.1)
+      activesupport (>= 5.1)
+      haml (>= 4.0.6)
+      railties (>= 5.1)
+    html2haml (2.3.0)
+      erubis (~> 2.7.0)
+      haml (>= 4.0)
+      nokogiri (>= 1.6.0)
+      ruby_parser (~> 3.5)
     i18n (1.13.0)
       concurrent-ruby (~> 1.0)
     importmap-rails (1.1.6)
@@ -167,6 +182,8 @@ GEM
     reline (0.3.3)
       io-console (~> 0.5)
     rexml (3.2.5)
+    ruby_parser (3.20.0)
+      sexp_processor (~> 4.16)
     rubyzip (2.3.2)
     sassc (2.4.0)
       ffi (~> 1.9)
@@ -180,6 +197,7 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+    sexp_processor (4.17.0)
     sprockets (4.2.0)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -189,6 +207,7 @@ GEM
       sprockets (>= 3.0.0)
     stimulus-rails (1.2.1)
       railties (>= 6.0.0)
+    temple (0.10.0)
     thor (1.2.1)
     tilt (2.1.0)
     timeout (0.3.2)
@@ -221,6 +240,8 @@ PLATFORMS
 DEPENDENCIES
   capybara
   debug
+  haml-rails
+  html2haml
   importmap-rails
   jbuilder
   pg (~> 1.1)
