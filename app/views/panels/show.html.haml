@@ -1,0 +1,24 @@
+.panel#panel
+  .slider-container
+    %input.slider#colorTemperatureSlider{type: :range, min: 0, max: 100, value: 50}
+    #demo
+
+:javascript
+  var panel = document.getElementById("panel")
+  var slider = document.getElementById("colorTemperatureSlider");
+  var red, green, blue, color
+
+  slider.oninput = function() {
+    // approximating 1500 to 11500 K color temperature
+    if (this.value > 50) {
+      red = (100 - (this.value - 50) * 0.485) * 2.55
+      green = (100 - (this.value - 50) * 0.33) * 2.55
+      blue = 255
+    } else {
+      red = 255
+      green = (100 - (50 - this.value) * 1.15) * 2.55
+      blue = Math.max((this.value * 2.1 - 13) * 2.55, 0)
+    }
+    color = "rgb(" + red + "," + green + "," + blue + ")"
+    panel.style.setProperty('background-color', color);
+  }

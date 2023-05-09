@@ -13,3 +13,32 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.panel {
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF;
+  width: 100%;
+  height: 100vh;
+}
+
+.slider-container {
+  margin: 0 auto;
+  padding: 1em 0;
+  width: 20em;
+  text-align: center;
+  opacity: 0.618;
+}
+
+.slider-container:hover {
+  opacity: 1.0;
+}
+
+.slider {
+  width: 100%;
+}
